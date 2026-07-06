@@ -2,7 +2,7 @@ import "leaflet/dist/leaflet.css";
 import "./globals.css";
 
 export const metadata = {
-  title: "UrbanMind V2",
+  title: "Urban Mind",
   description: "Map-based urban safety and activity intelligence",
 };
 

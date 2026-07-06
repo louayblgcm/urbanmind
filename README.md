@@ -1,6 +1,6 @@
-# UrbanMind V2
+# Urban Mind
 
-UrbanMind V2 is a full-stack urban intelligence project that combines spatial data engineering, machine learning, and an interactive map interface.
+Urban Mind is a full-stack urban intelligence project that combines spatial data engineering, machine learning, and an interactive map interface.
 
 The project ingests public city datasets, builds long-term neighborhood profiles, and serves a next-24-hour crime-pressure forecast together with urban context signals like transit, nightlife, workplace activity, and 311 pressure.
 
@@ -26,26 +26,26 @@ I built this project because I wanted to see whether urban data could be turned 
 
 ```text
 urbanmindv2/
-├─ backend/
-│  ├─ api/                 # FastAPI app
-│  ├─ config/              # environment-driven configuration
-│  ├─ models/              # reusable model definitions
-│  ├─ scripts/
-│  │  ├─ cognition/        # cell-level retrieval pipeline
-│  │  ├─ context/          # reverse geocoding + OSM/context assembly
-│  │  ├─ ingestion/        # API/database ingestion jobs
-│  │  ├─ intelligence/     # static + dynamic modeling and forecast logic
-│  │  ├─ llm/              # Groq client + prompt builder
-│  │  └─ orchestration/    # scheduled ingestion/training pipeline
-│  ├─ .env.example
-│  └─ requirements.txt
-├─ frontend/
-│  ├─ app/                 # Next.js app router UI
-│  ├─ public/
-│  ├─ types/
-│  └─ .env.example
-├─ main.py                 # local backend entrypoint
-└─ README.md
+|-- backend/
+|   |-- api/                 # FastAPI app
+|   |-- config/              # environment-driven configuration
+|   |-- models/              # reusable model definitions
+|   |-- scripts/
+|   |   |-- cognition/       # cell-level retrieval pipeline
+|   |   |-- context/         # reverse geocoding + OSM/context assembly
+|   |   |-- ingestion/       # API/database ingestion jobs
+|   |   |-- intelligence/    # static + dynamic modeling and forecast logic
+|   |   |-- llm/             # Groq client + prompt builder
+|   |   `-- orchestration/   # scheduled ingestion/training pipeline
+|   |-- .env.example
+|   `-- requirements.txt
+|-- frontend/
+|   |-- app/                 # Next.js app router UI
+|   |-- public/
+|   |-- types/
+|   `-- .env.example
+|-- main.py                  # local backend entrypoint
+`-- README.md
 ```
 
 ## Core system design
@@ -54,7 +54,7 @@ The system has two modeling layers:
 
 1. Static intelligence
    - Builds leakage-safe cell features from historical data
-   - Trains a static graph model to estimate persistent neighborhood risk/activity structure
+   - Trains a static graph model to estimate persistent neighborhood risk and activity structure
 
 2. Dynamic intelligence
    - Uses recent crime + 311 sequences, neighborhood context, and static baselines
@@ -65,7 +65,7 @@ The API combines those outputs into:
 - map metrics
 - overview narratives
 - chat responses
-- timeline/forecast visualizations
+- timeline and forecast visualizations
 
 ## How the training pipeline works
 
@@ -131,6 +131,12 @@ From `backend/`:
 
 More details are documented in [backend/ORCHESTRATION.md](backend/ORCHESTRATION.md).
 
+## What I learned
+
+This project taught me that the hard part is not only training a model. The harder part is keeping ingestion, feature engineering, training, API responses, and frontend presentation aligned so the whole system still makes sense end to end.
+
+It also pushed me to think more carefully about uncertainty. With urban data, especially short-term crime forecasting, it is easy to produce numbers that look precise without actually being reliable enough. A lot of the work here was about building safer baselines, checking model behavior honestly, and making the UI communicate that clearly.
+
 ## Notes on the current forecast
 
 The dynamic forecast is currently served as an advisory model rather than a fully certified production forecaster.
@@ -141,6 +147,13 @@ That is intentional and explicit in the API payload:
 - the dynamic model is exposed because it adds non-baseline movement
 - upstream crime-feed freshness can still limit reliability
 
+## Current limitations
+
+- Forecast quality still depends on how fresh the upstream crime data is.
+- Very fine-grained prediction is difficult because the data is sparse in both space and time.
+- The dynamic model is shown as an advisory layer, not as a guaranteed production-grade forecaster.
+- The strongest part of the system right now is the overall pipeline design and integration, not the claim of perfect prediction.
+
 ## What this repo is meant to show
 
 This repository is mainly a portfolio project. The parts I think are strongest are:
@@ -149,8 +162,8 @@ This repository is mainly a portfolio project. The parts I think are strongest a
 - data pipeline thinking
 - geospatial feature engineering
 - ML experimentation and evaluation discipline
-- API/UI integration across a fairly complex stack
+- API and UI integration across a fairly complex stack
 
 ## Author
 
-Louay — student builder focused on practical AI, data systems, and urban intelligence workflows.
+Louay - student builder focused on practical AI, data systems, and urban intelligence workflows.
