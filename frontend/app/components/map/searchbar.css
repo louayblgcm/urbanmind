@@ -1,0 +1,343 @@
+/* =========================================================
+   MAPBOX SEARCH — PREMIUM URBAN INTELLIGENCE STYLE
+========================================================= */
+
+.mapboxgl-ctrl-top-left {
+
+  top: calc(env(safe-area-inset-top) + 24px) !important;
+
+  left: 24px !important;
+}
+
+/* =========================================================
+   MAIN SEARCH CONTAINER
+========================================================= */
+
+.mapboxgl-ctrl-geocoder {
+
+  width: 460px !important;
+
+  max-width: 92vw !important;
+
+  border-radius: 30px !important;
+
+  background:
+    rgba(11,19,27,0.72) !important;
+
+  backdrop-filter:
+    blur(34px) saturate(180%) !important;
+
+  -webkit-backdrop-filter:
+    blur(34px) saturate(180%) !important;
+
+  box-shadow:
+    0 12px 50px rgba(0,0,0,0.22),
+    0 0 80px rgba(34,211,238,0.06) !important;
+
+  border:
+    1px solid rgba(255,255,255,0.08) !important;
+
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "SF Pro Display",
+    sans-serif !important;
+
+  overflow: visible !important;
+
+  transition:
+    all 0.25s ease !important;
+}
+
+/* =========================================================
+   HOVER / FOCUS GLOW
+========================================================= */
+
+.mapboxgl-ctrl-geocoder:focus-within {
+
+  border:
+    1px solid rgba(34,211,238,0.16) !important;
+
+  box-shadow:
+    0 12px 50px rgba(0,0,0,0.22),
+    0 0 90px rgba(34,211,238,0.10) !important;
+}
+
+/* =========================================================
+   INPUT
+========================================================= */
+
+.mapboxgl-ctrl-geocoder--input {
+
+  height: 64px !important;
+
+  padding-left: 58px !important;
+
+  padding-right: 18px !important;
+
+  font-size: 15px !important;
+
+  font-weight: 500 !important;
+
+  letter-spacing: -0.01em !important;
+
+  background: transparent !important;
+
+  color: white !important;
+
+  border: none !important;
+
+  outline: none !important;
+}
+
+.mapboxgl-ctrl-geocoder--input::placeholder {
+
+  color:
+    rgba(255,255,255,0.32) !important;
+}
+
+/* =========================================================
+   SEARCH ICON
+========================================================= */
+
+.mapboxgl-ctrl-geocoder--icon {
+
+  top: 20px !important;
+
+  left: 18px !important;
+
+  fill:
+    rgba(255,255,255,0.42) !important;
+}
+
+/* =========================================================
+   SUGGESTIONS DROPDOWN
+========================================================= */
+
+.mapboxgl-ctrl-geocoder--suggestions {
+
+  display: block !important;
+
+  visibility: visible !important;
+
+  opacity: 1 !important;
+
+  z-index: 999999 !important;
+
+  margin-top: 12px !important;
+
+  border-radius: 26px !important;
+
+  overflow: hidden !important;
+
+  background:
+    rgba(11,19,27,0.92) !important;
+
+  backdrop-filter:
+    blur(34px) saturate(180%) !important;
+
+  -webkit-backdrop-filter:
+    blur(34px) saturate(180%) !important;
+
+  box-shadow:
+    0 16px 50px rgba(0,0,0,0.24),
+    0 0 60px rgba(34,211,238,0.06) !important;
+
+  border:
+    1px solid rgba(255,255,255,0.08) !important;
+
+  padding:
+    8px !important;
+}
+
+/* =========================================================
+   SUGGESTION ITEMS
+========================================================= */
+
+.mapboxgl-ctrl-geocoder--suggestion {
+
+  display: flex !important;
+
+  align-items: center !important;
+
+  gap: 10px !important;
+
+  padding: 16px 18px !important;
+
+  color: white !important;
+
+  background: transparent !important;
+
+  font-size: 14px !important;
+
+  border-radius: 18px !important;
+
+  transition:
+    all 0.16s ease !important;
+}
+
+/* =========================================================
+   HOVER STATE
+========================================================= */
+
+.mapboxgl-ctrl-geocoder--suggestion:hover {
+
+  background:
+    rgba(255,255,255,0.05) !important;
+
+  transform:
+    scale(0.992);
+}
+
+/* =========================================================
+   SUGGESTION TITLE
+========================================================= */
+
+.mapboxgl-ctrl-geocoder--suggestion-title {
+
+  color: white !important;
+
+  font-weight: 600 !important;
+
+  font-size: 14px !important;
+}
+
+/* =========================================================
+   SUGGESTION ADDRESS
+========================================================= */
+
+.mapboxgl-ctrl-geocoder--suggestion-address {
+
+  color:
+    rgba(255,255,255,0.42) !important;
+
+  margin-top: 3px !important;
+
+  font-size: 12px !important;
+}
+
+/* =========================================================
+   CLEAR BUTTON
+========================================================= */
+
+.mapboxgl-ctrl-geocoder--button {
+
+  background: transparent !important;
+}
+
+/* =========================================================
+   LOADING SPINNER
+========================================================= */
+
+.mapboxgl-ctrl-geocoder--icon-loading {
+
+  fill:
+    rgba(34,211,238,0.7) !important;
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .mapboxgl-ctrl-geocoder {
+
+    width: calc(100vw - 32px) !important;
+
+    border-radius: 24px !important;
+  }
+
+  .mapboxgl-ctrl-top-left {
+
+    left: 16px !important;
+
+    top: calc(env(safe-area-inset-top) + 14px) !important;
+  }
+
+  .mapboxgl-ctrl-geocoder--input {
+
+    height: 56px !important;
+
+    padding-left: 54px !important;
+
+    padding-right: 14px !important;
+
+    font-size: 14px !important;
+  }
+
+  .mapboxgl-ctrl-geocoder--icon {
+
+    top: 16px !important;
+
+    left: 16px !important;
+  }
+
+  .mapboxgl-ctrl-geocoder--suggestions {
+
+    margin-top: 10px !important;
+
+    border-radius: 22px !important;
+  }
+
+  .mapboxgl-ctrl-geocoder--suggestion {
+
+    padding: 14px 16px !important;
+
+    border-radius: 16px !important;
+  }
+
+  .mapboxgl-ctrl-bottom-right {
+
+    right: 12px !important;
+
+    bottom: calc(env(safe-area-inset-bottom) + 14px) !important;
+  }
+
+  .mapboxgl-ctrl-group {
+
+    overflow: hidden !important;
+
+    border-radius: 18px !important;
+
+    border: 1px solid rgba(255,255,255,0.08) !important;
+
+    background: rgba(11,19,27,0.78) !important;
+
+    backdrop-filter: blur(24px) saturate(180%) !important;
+
+    -webkit-backdrop-filter: blur(24px) saturate(180%) !important;
+
+    box-shadow:
+      0 10px 30px rgba(0,0,0,0.22) !important;
+  }
+
+  .mapboxgl-ctrl-group button {
+
+    width: 42px !important;
+
+    height: 42px !important;
+
+    background: transparent !important;
+  }
+
+  .mapboxgl-ctrl-group button + button {
+
+    border-top: 1px solid rgba(255,255,255,0.06) !important;
+  }
+
+  .mapboxgl-ctrl button .mapboxgl-ctrl-icon {
+
+    opacity: 0.84 !important;
+  }
+
+  .mapboxgl-ctrl-scale {
+
+    display: none !important;
+  }
+
+  .map-shell[data-area-selected="true"] .mapboxgl-ctrl-bottom-right {
+
+    bottom: calc(30dvh + env(safe-area-inset-bottom) + 18px) !important;
+  }
+}

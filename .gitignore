@@ -1,0 +1,32 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.agents/
+
+# Python
+venv/
+__pycache__/
+*.py[cod]
+
+# Frontend build / dependencies
+frontend/node_modules/
+frontend/.next/
+frontend/Urban/
+
+# Environment files
+backend/.env
+frontend/.env.local
+
+# Generated backend artifacts
+backend/data/debug/
+backend/data/logs/
+backend/data/processed/
+backend/data/osm/
+backend/data/models/archive/
+backend/data/models/*.pt
+backend/data/models/*.joblib
+backend/data/models/*.candidate.*
+
+# Misc local noise
+=

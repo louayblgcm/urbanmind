@@ -1,0 +1,16 @@
+/* =========================================
+   HIDE SCROLLBARS
+========================================= */
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.mapboxgl-ctrl-bottom-right {
+  transition: bottom 0.25s ease, right 0.25s ease;
+}
