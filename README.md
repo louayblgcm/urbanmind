@@ -163,6 +163,7 @@ This repository is mainly a portfolio project. The parts I think are strongest a
 - geospatial feature engineering
 - ML experimentation and evaluation discipline
 - API and UI integration across a fairly complex stack
+<img width="1692" height="930" alt="ChatGPT Image 6  Juli 2026, 13_29_23" src="https://github.com/user-attachments/assets/f11e20c9-b12f-4db3-a6a5-6d57b7f21ec6" />
 
 ## Author
 
